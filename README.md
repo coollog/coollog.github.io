@@ -1,1 +1,1 @@
-[coollog.me](coollog.me)
+[coollog.me](http://coollog.me)
