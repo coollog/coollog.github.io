@@ -41,6 +41,7 @@ paginate_path: /:num/
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-archives
 
 # Enable comments
 comments:
