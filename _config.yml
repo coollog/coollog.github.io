@@ -47,6 +47,13 @@ comments:
   disqus:
     shortname: "blog-emln9twe6i"
 
+# Enable analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-10510072-9"
+    anonymize_ip: false # default
+
 # Enable search
 search: true
 
@@ -71,7 +78,7 @@ defaults:
       comments: true
       read_time: true
       share: true
-      related: true
+      # related: true
 
 # Compression
 compress_html:

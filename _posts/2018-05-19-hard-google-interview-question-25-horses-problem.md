@@ -1,6 +1,6 @@
 ---
 title:  "The 25 Horses Problem"
-date:   2018-05-19 20:42:30 -0500
+date:   2018-05-19 20:42:30 -0400
 categories: problem-solving
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
