@@ -111,8 +111,8 @@ The framework I used in solving this problem can be used to solve many other typ
 1. Define what we need to prove
 1. Model the problem to break it down and see what we actually need to solve
 1. Start easy and gradually engineer the solution by:
-  1. Removing the unnecessary parts, and
-  1. Building from the ground up
+    1. Removing the unnecessary parts, and
+    1. Building from the ground up
 
 ## Remarks
 
