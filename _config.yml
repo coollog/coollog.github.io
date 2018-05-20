@@ -79,6 +79,7 @@ defaults:
       comments: true
       read_time: true
       share: true
+      author_profile: true
       # related: true
 
 # Compression
