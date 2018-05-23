@@ -23,6 +23,7 @@ twitter_username: coollog
 github_username:  coollog
 github: [metadata]
 repository: "coollog/coollog.github.io"
+timezone: America/New_York
 
 # Breadcrumbs
 permalink: /:categories/:title/
