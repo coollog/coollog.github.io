@@ -7,7 +7,7 @@ I was working on the concurrency part of my main project at work today. The prog
 
 I organized these steps into a dependency graph. Each step defined previous steps it needed to wait on before running. Steps with no dependencies could run immediately. With this structure, many steps could run at the same time, but no step would run before they were supposed to.
 
-![execution dependency graph](/../../assets/images/posts/execution_dependency.png){: .align-center style="max-width: 300px;"}
+![execution dependency graph](/../../assets/images/posts/execution_dependency_graph.png){: .align-center style="max-width: 300px;"}
 
 *Example of an execution dependency graph with steps A...F*
 {: style="text-align: center"}
@@ -22,21 +22,21 @@ I thought for a long time. And then it suddenly hit me. I figured it out. This w
 
 The lazy initialization worked like this. Each step has a "future" variable and a "get future" method. The "future" variable is initially undefined. When another step calls the "get future" method the first time, the method submits the step to the execution manager and sets the "future" variable. Further calls to "get future" returns that submitted future.
 
-!["get future" method](/../../assets/images/posts/get_future_method.png){: .align-center style="max-width: 300px;"}
+!["get future" method](/../../assets/images/posts/get_future_method.png){: .align-center style="max-width: 600px;"}
 
 *"get future" method*
 {: style="text-align: center"}
 
 Each step calls its dependencies' "get future" method to get the futures to wait upon. Therefore, this initialization design builds the dependency graph from the last step backwards.
 
-![backwards initialization](/../../assets/images/posts/backwards_initialization.png){: .align-center style="max-width: 300px;"}
+![backwards initialization](/../../assets/images/posts/backwards_initialization.png){: .align-center style="max-width: 600px;"}
 
 *Illustration of how the dependency graph is built backwards*
 {: style="text-align: center"}
 
 From this, I noticed the flaw in this initialization method - it had a blaring race condition. For example, let's take a look at a scenario where two steps depend on a single step:
 
-![dependency with race condition](/../../assets/images/posts/race_dependency.png){: .align-center style="max-width: 300px;"}
+![dependency with race condition](/../../assets/images/posts/race_dependency.png){: .align-center style="max-width: 200px;"}
 
 Let's say B and C happened to call A's "get future" method at the same time. B's call has A submit future 1 to the execution manager. C's call has A submit future 2 to the execution manager. This causes A to set its "future" variable to future 1 and then change it to future 2. Later, B calls A's "get future" method again. B receives future 2, and not future 1 as it had expected.
 
