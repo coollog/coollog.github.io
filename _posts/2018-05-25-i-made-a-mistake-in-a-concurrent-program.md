@@ -1,3 +1,4 @@
+
 title:  "I made a mistake in a concurrent program"
 date:   2018-05-25 10:42:30 -0400
 categories: debugging
