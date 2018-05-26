@@ -22,14 +22,14 @@ I thought for a long time. And then it suddenly hit me. I figured it out. This w
 
 The lazy initialization worked like this. Each step has a "future" variable and a "get future" method. The "future" variable is initially undefined. When another step calls the "get future" method the first time, the method submits the step to the execution manager and sets the "future" variable. Further calls to "get future" returns that submitted future.
 
-!["get future" method](/../../assets/images/posts/get_future_method.png){: .align-center style="max-width: 600px;"}
+!["get future" method](/../../assets/images/posts/get_future_method.png){: .align-center style="max-width: 600px; width: 100%"}
 
 *"get future" method*
 {: style="text-align: center"}
 
 Each step calls its dependencies' "get future" method to get the futures to wait upon. Therefore, this initialization design builds the dependency graph from the last step backwards.
 
-![backwards initialization](/../../assets/images/posts/backwards_initialization.png){: .align-center style="max-width: 600px;"}
+![backwards initialization](/../../assets/images/posts/backwards_initialization.png){: .align-center style="max-width: 600px; width: 100%"}
 
 *Illustration of how the dependency graph is built backwards*
 {: style="text-align: center"}
