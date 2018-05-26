@@ -40,7 +40,7 @@ From this, I noticed the flaw in this initialization method - it had a blaring r
 
 Let's say B and C happened to call A's "get future" method at the same time. B's call has A submit future 1 to the execution manager. C's call has A submit future 2 to the execution manager. This causes A to set its "future" variable to future 1 and then change it to future 2. Later, B calls A's "get future" method again. B receives future 2, and not future 1 as it had expected.
 
-So, how do we solve this problem? By not doing this backwards initialization. Each step should just initialize itself. Each step would submit itself to the execution manager upon creation. THis means that each step would only ever create one future. Each step's "get future" method would always return the same future.
+So, how do we solve this problem? By not doing this backwards initialization. Each step should just initialize itself. Each step would submit itself to the execution manager upon creation. This means that each step would only ever create one future. Each step's "get future" method would always return the same future.
 
 I made this fix, and the problem disappeared.
 
