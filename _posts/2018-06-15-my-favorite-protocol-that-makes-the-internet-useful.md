@@ -1,7 +1,7 @@
 ---
 title:  "My favorite protocol that makes the Internet useful"
 date:   2018-06-18 20:12:11 -0400
-categories: debugging
+categories: computer-science
 ---
 I remember when I was first dabbling in making online multiplayer video games. I ran into many issues of people "hacking" my game and stealing players' passwords. Of course, this was a major issue, but I at the time had no clue how these "hackers" could get ahold of the passwords. It was later that I realized that all data sent over the Internet is public. Anyone could see the data that my game's server sent to the players and vice versa. Whenever a player logged in, their game would send their password to my server for verification. This data was sent over the Internet, and anyone watching would be able to see the password.
 
