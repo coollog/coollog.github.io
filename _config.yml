@@ -68,6 +68,7 @@ author:
   bio      : "Blogging about things I like to think about."
   email    : "qingyang.chen@gmail.com"
   github   : "coollog"
+  twitter  : "coollog"
   home     : # null (default), "absolute or relative url to link to author home"
 
 # Front matter defaults
