@@ -1,6 +1,6 @@
 ---
 title:  "Taxes now or taxes later"
-date:   2019-07-29 08:12:11 -0700
+date:   2019-07-29 11:10:11 -0700
 share: true
 categories: personal-finance
 ---
@@ -84,7 +84,7 @@ Let's put the Roth 401(k) model in equation form.
 
 The Contribution is $$x$$.<br />
 The Taxes now is $$t_0x$$.
-The Growth (tax-free) is $$x(r_y-1)$$. Here, we have to subtract the lost growth on the portion paid as taxes as well, which is $$t_0x(r_t^y-1)$$. Note that we use the growth with taxes here since the portion paid to taxes would have grown without tax advantages.
+The Growth (tax-free) is $$x(r^y-1)$$. Here, we have to subtract the lost growth on the portion paid as taxes as well, which is $$t_0x(r_t^y-1)$$. Note that we use the growth with taxes here since the portion paid to taxes would have grown without tax advantages.
 
 The Future value for the Roth 401(k) model is thus:
 
@@ -97,12 +97,13 @@ This is quite similar to the non-tax-advantaged case except that we have the pos
 Now, let's compare the Roth 401(k) to a traditional 401(k). Let's take a look at the traditional 401(k) model (with the tax cost split out into its own term) alongside the Roth 401(k) model:
 
 $$xr^y-t_1xr^y$$ traditional 401(k) vs. $$xr^y-t_0xr_t^y$$ Roth 401(k)
+{: style="text-align: center"}
 
-Now we can compare the traditional 401(k) to Roth 401(k) easily. As you can see, both share a common term $$xr^y$$, the initial amount with growth. The only difference is in the tax cost term. For Roth 401(k), the tax cost is $$t_0xr_t^y$$, whereas for traditional 401(k), the tax cost is $$t_1xr^y. These have a common term $$x$$ that can also be disregarded. We have simplified the comparison between traditional 401(k) and Roth 401(k) to just:
+Now we can compare the traditional 401(k) to Roth 401(k) easily. As you can see, both share a common term $$xr^y$$, the initial amount with growth. The only difference is in the tax cost term. For Roth 401(k), the tax cost is $$t_0xr_t^y$$, whereas for traditional 401(k), the tax cost is $$t_1xr^y$$. These have a common term $$x$$ that can also be disregarded. We have simplified the comparison between traditional 401(k) and Roth 401(k) to just:
 
-Traditional 401(k) vs Roth 401(k)
-
+Traditional 401(k) vs Roth 401(k)<br />
 $$t_1r^y$$ vs $$t_0r_t^y$$
+{: style="text-align: center"}
 
 This looks familiar doesn't it. This is just like comparing the traditional 401(k) model to the no tax advantage model, except here the Roth 401(k) is like the traditional 401(k) and the traditional 401(k) is like the no tax advantage. Comparing the models, the Roth 401(k) contribution is worth it if:
 
